@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="am" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ተክለ ቴዎፍሎስ ሰ/ት/ቤት ትምህርት እና ሥልጠና ክፍል | Tekle Tewophilos Sunday School Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #162a4a;
+    --primary-dark: #0e1c33;
+    --accent: #b88a28;
+    --accent-light: #e7c675;
+    --bg: #f6f4ef;
+    --surface: #ffffff;
+    --surface-alt: #faf8f3;
+    --text: #18202c;
+    --muted: #5c6675;
+    --border: #e4decb;
+    --success: #157347;
+    --danger: #b42318;
+    --warning: #b54708;
+    --shadow: 0 10px 30px rgba(22, 42, 74, 0.08);
+    --radius: 14px;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Noto Sans Ethiopic', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* Header & Navigation */
+  header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    color: #fff;
+    border-bottom: 3px solid var(--accent);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+
+  .header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.85rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .logo-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .brand-titles h1 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: #fff;
+  }
+
+  .brand-titles p {
+    font-size: 0.78rem;
+    color: var(--accent-light);
+    font-weight: 500;
+  }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .pill-btn {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.22);
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .pill-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+  }
+
+  .pill-btn.gold {
+    background: var(--accent);
+    border-color: var(--accent-light);
+    color: #fff;
+  }
+
+  .pill-btn.gold:hover {
+    background: #9f751d;
+  }
+
+  .pill-btn.danger {
+    background: rgba(180, 35, 24, 0.25);
+    border-color: rgba(255,255,255,0.25);
+  }
+
+  /* Nav Tabs Bar */
+  .nav-bar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 1.25rem;
+    overflow-x: auto;
+  }
+
+  .nav-tabs {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0.35rem;
+  }
+
+  .tab-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+  }
+
+  .tab-btn:hover {
+    color: var(--primary);
+  }
+
+  .tab-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--accent);
+  }
+
+  /* Main Container */
+  main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3.5rem;
+  }
+
+  /* Session Status Banner */
+  .session-strip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 0.75rem 1.1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.88rem;
+    box-shadow: var(--shadow);
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.22rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 700;
+  }
+
+  .badge-navy { background: rgba(22, 42, 74, 0.1); color: var(--primary); }
+  .badge-gold { background: rgba(184, 138, 40, 0.16); color: #8c6614; }
+  .badge-green { background: rgba(21, 115, 71, 0.12); color: var(--success); }
+  .badge-red { background: rgba(180, 35, 24, 0.12); color: var(--danger); }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(125deg, var(--primary) 0%, var(--primary-dark) 75%);
+    color: #fff;
+    border-radius: 18px;
+    padding: 2rem;
+    margin-bottom: 1.75rem;
+    border: 1px solid rgba(231, 198, 117, 0.35);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(231,198,117,0.18), transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero h2 {
+    font-size: 1.55rem;
+    font-weight: 800;
+    margin-bottom: 0.45rem;
+  }
+
+  .hero p {
+    color: rgba(255,255,255,0.88);
+    max-width: 760px;
+    font-size: 0.95rem;
+  }
+
+  .custom-btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.15rem;
+  }
+
+  /* Grid & Cards */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.15rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Toolbar / Search / Filter */
+  .toolbar {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+    background: var(--surface);
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 0.62rem 0.8rem;
+    border: 1px solid #cfd6df;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background: #fff;
+    color: var(--text);
+  }
+
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(184, 138, 40, 0.16);
+  }
+
+  label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+  }
+
+  .field {
+    margin-bottom: 0.85rem;
+  }
+
+  .btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.58rem 1rem;
+    border-radius: 10px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    transition: all 0.18s ease;
+  }
+
+  .btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+  }
+
+  .btn-gold {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
+  }
+
+  .btn-danger {
+    background: var(--danger);
+    color: #fff;
+  }
+
+  .btn-sm {
+    padding: 0.38rem 0.72rem;
+    font-size: 0.78rem;
+    border-radius: 8px;
+  }
+
+  /* Book Card */
+  .book-cover {
+    height: 112px;
+    border-radius: 10px;
+    padding: 0.9rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0.85rem;
+  }
+
+  .book-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.2rem;
+  }
+
+  .book-sub {
+    font-size: 0.84rem;
+    color: var(--muted);
+    margin-bottom: 0.65rem;
+  }
+
+  /* Notice Item */
+  .notice-card {
+    border-left: 4px solid var(--primary);
+    margin-bottom: 0.95rem;
+  }
+
+  .notice-card.urgent {
+    border-left-color: var(--danger);
+    background: #fffafa;
+  }
+
+  .notice-card.gold {
+    border-left-color: var(--accent);
+  }
+
+  /* Classroom Box */
+  .classroom-card {
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.15rem;
+    background: var(--surface-alt);
+  }
+
+  .classroom-card.live {
+    border-color: var(--success);
+    background: #f4fbf7;
+  }
+
+  /* Admin Tabs */
+  .subtabs {
+    display: flex;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+  }
+
+  .subtab-btn {
+    padding: 0.5rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-weight: 700;
+    font-size: 0.84rem;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .subtab-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+
+  /* Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 18, 32, 0.62);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 200;
+  }
+
+  .modal-backdrop.open {
+    display: flex;
+  }
+
+  .modal {
+    background: var(--surface);
+    border-radius: 16px;
+    max-width: 480px;
+    width: 100%;
+    padding: 1.5rem;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.28);
+    border-top: 4px solid var(--accent);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .close-x {
+    background: none;
+    border: none;
+    font-size: 1.35rem;
+    cursor: pointer;
+    color: var(--muted);
+  }
+
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-dark);
+    color: #fff;
+    padding: 0.75rem 1.1rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    font-size: 0.86rem;
+    font-weight: 600;
+    z-index: 300;
+    display: none;
+  }
+
+  .toast.show {
+    display: block;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 0.6rem 0.65rem;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+  }
+
+  th {
+    background: var(--surface-alt);
+    color: var(--primary);
+    font-weight: 800;
+  }
+
+  .muted { color: var(--muted); font-size: 0.84rem; }
+  .hidden { display: none !important; }
+  .mt-1 { margin-top: 0.5rem; }
+  .mt-2 { margin-top: 1rem; }
+  .flex-gap { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <div class="logo-box" id="headerLogoBox">
+        <!-- Default Dignified Emblem SVG -->
+        <svg id="defaultLogoSvg" width="34" height="34" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="15" stroke="#e7c675" stroke-width="2"/>
+          <path d="M18 7V29M10 14H26" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+          <circle cx="18" cy="18" r="4" fill="#e7c675"/>
+        </svg>
+        <img id="customLogoImg" class="hidden" alt="Logo" />
+      </div>
+      <div class="brand-titles">
+        <h1 id="siteNameDisplay">ተክለ ቴዎፍሎስ ሰ/ት/ቤት ትምህርት እና ሥልጠና ክፍል</h1>
+        <p id="siteSubDisplay">Tekle Tewophilos Sunday School — Education & Training Department</p>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <button class="pill-btn" id="langToggleBtn" onclick="toggleLanguage()">🌐 English</button>
+      <button class="pill-btn" id="syncBtn" onclick="syncFromCloud()" title="Sync Google Sheets">🔄 <span id="syncBtnText">Sync</span></button>
+      <button class="pill-btn gold" id="loginOpenBtn" onclick="openLoginModal()">🔐 <span id="loginBtnText">ግባ / Login</span></button>
+      <button class="pill-btn danger hidden" id="logoutBtn" onclick="logoutUser()">🚪 <span id="logoutBtnText">ውጣ / Logout</span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-bar">
+  <div class="nav-tabs" id="navTabsContainer"></div>
+</nav>
+
+<main>
+  <div class="session-strip" id="sessionStrip">
+    <div id="sessionStatusText"></div>
+    <div class="flex-gap" id="sessionQuickActions"></div>
+  </div>
+
+  <div id="pageContainer"></div>
+</main>
+
+<!-- Login Modal -->
+<div class="modal-backdrop" id="loginModal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="loginModalTitle">መግቢያ / Portal Login</h3>
+      <button class="close-x" onclick="closeLoginModal()">&times;</button>
+    </div>
+
+    <div class="subtabs">
+      <button class="subtab-btn active" id="roleTabStudent" onclick="switchLoginRole('student')">🎓 Student</button>
+      <button class="subtab-btn" id="roleTabTeacher" onclick="switchLoginRole('teacher')">👨‍🏫 Teacher (7–12)</button>
+      <button class="subtab-btn" id="roleTabAdmin" onclick="switchLoginRole('admin')">🛡️ Super Admin</button>
+    </div>
+
+    <!-- Student Login -->
+    <form id="studentLoginForm" onsubmit="handleStudentLogin(event)">
+      <div class="field">
+        <label id="lblStudentGrade">ክፍል / Grade & Section</label>
+        <select id="studentGradeSelect"></select>
+      </div>
+      <div class="field">
+        <label id="lblStudentCode">የክፍል መግቢያ ኮድ / Section Passcode</label>
+        <input type="password" id="studentPasscodeInput" required placeholder="e.g. 7A2026" />
+      </div>
+      <button type="submit" class="btn btn-gold" style="width:100%" id="btnStudentSubmit">ግባ / Enter Grade</button>
+    </form>
+
+    <!-- Teacher Login -->
+    <form id="teacherLoginForm" class="hidden" onsubmit="handleTeacherLogin(event)">
+      <div class="field">
+        <label>Teacher ID / መምህር መታወቂያ</label>
+        <input type="text" id="teacherIdInput" required placeholder="teacher" />
+      </div>
+      <div class="field">
+        <label>PIN / የይለፍ ቃል</label>
+        <input type="password" id="teacherPassInput" required placeholder="teach123" />
+      </div>
+      <button type="submit" class="btn" style="width:100%">Teacher Login / መምህር ይግቡ</button>
+    </form>
+
+    <!-- Super Admin Login -->
+    <form id="adminLoginForm" class="hidden" onsubmit="handleAdminLogin(event)">
+      <div class="field">
+        <label>Super Admin Username</label>
+        <input type="text" id="adminUserInput" required placeholder="admin" />
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="adminPassInput" required placeholder="admin123" />
+      </div>
+      <button type="submit" class="btn btn-gold" style="width:100%">Super Admin Login</button>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toastBox"></div>
+
+<script>
+const GRADES = ['1', '2', '3A', '3B', '4', '5', '6', '7A', '7B', '8', '9', '10', '11', '12'];
+const ONLINE_GRADES = ['7A', '7B', '8', '9', '10', '11', '12'];
+
+const DEFAULT_STATE = {
+  lang: 'am',
+  gasUrl: '',
+  theme: {
+    primary: '#162a4a',
+    primaryDark: '#0e1c33',
+    accent: '#b88a28',
+    bg: '#f6f4ef',
+    logoUrl: '',
+    heroTitleAm: 'እንኳን ወደ ተክለ ቴዎፍሎስ ሰ/ት/ቤት ትምህርት እና ሥልጠና ክፍል በደህና መጡ',
+    heroTitleEn: 'Welcome to Tekle Tewophilos Sunday School Education & Training Department',
+    heroSubAm: 'የመጽሐፍት ቤተ-መጻሕፍት፣ የተማሪዎች ማሳወቂያዎች እና የ7ኛ–12ኛ ክፍል የኦንላይን ትምህርት መድረክ',
+    heroSubEn: 'Digital PDF Library, Student Notifications, and Online Classrooms for Grades 7–12'
+  },
+  credentials: {
+    adminUser: 'admin',
+    adminPass: 'admin123',
+    teacherId: 'teacher',
+    teacherPass: 'teach123'
+  },
+  sections: [
+    { grade: '1', passcode: 'G1-2026', onlineAllowed: false },
+    { grade: '2', passcode: 'G2-2026', onlineAllowed: false },
+    { grade: '3A', passcode: 'G3A-2026', onlineAllowed: false },
+    { grade: '3B', passcode: 'G3B-2026', onlineAllowed: false },
+    { grade: '4', passcode: 'G4-2026', onlineAllowed: false },
+    { grade: '5', passcode: 'G5-2026', onlineAllowed: false },
+    { grade: '6', passcode: 'G6-2026', onlineAllowed: false },
+    { grade: '7A', passcode: 'G7A-2026', onlineAllowed: true },
+    { grade: '7B', passcode: 'G7B-2026', onlineAllowed: true },
+    { grade: '8', passcode: 'G8-2026', onlineAllowed: true },
+    { grade: '9', passcode: 'G9-2026', onlineAllowed: true },
+    { grade: '10', passcode: 'G10-2026', onlineAllowed: true },
+    { grade: '11', passcode: 'G11-2026', onlineAllowed: true },
+    { grade: '12', passcode: 'G12-2026', onlineAllowed: true }
+  ],
+  books: [
+    {
+      id: 'bk-1',
+      titleAm: 'የክርስትና ትምህርት መሠረቶች',
+      titleEn: 'Foundations of Sunday School Doctrine',
+      author: 'ትምህርት ክፍል',
+      grade: '7A',
+      category: 'Doctrine / ትምህርተ ሃይማኖት',
+      pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+      coverColor: '#162a4a',
+      addedDate: '2026-11-01'
+    },
+    {
+      id: 'bk-2',
+      titleAm: 'የቅዱሳት መጻሕፍት መግቢያ',
+      titleEn: 'Introduction to Holy Scriptures',
+      author: 'ሥልጠና ክፍል',
+      grade: '3A',
+      category: 'Scripture / መጽሐፍ ቅዱስ',
+      pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+      coverColor: '#b88a28',
+      addedDate: '2026-11-05'
+    }
+  ],
+  announcements: [
+    {
+      id: 'an-1',
+      titleAm: 'የሳምንቱ መደበኛ ትምህርት እና የመጻሕፍት ማሳሰቢያ',
+      titleEn: 'Weekly Study & Library Notice',
+      bodyAm: 'ተማሪዎች ለክፍላችሁ የተዘጋጁትን ፒዲኤፍ መጻሕፍት ከቤተ-መጻሕፍት ክፍል በመግባት ማንበብ እና ማውረድ ትችላላችሁ።',
+      bodyEn: 'Students can browse and download PDF books assigned to their grade from the Library tab.',
+      priority: 'gold',
+      targetGrade: 'All',
+      date: '2026-11-20'
+    }
+  ],
+  classrooms: ONLINE_GRADES.map(g => ({
+    grade: g,
+    isLive: false,
+    teacherName: '',
+    topicAm: '',
+    topicEn: '',
+    meetingUrl: '',
+    sessionPassword: '',
+    startedAt: ''
+  })),
+  customTabs: [
+    {
+      id: 'tab-schedule',
+      labelAm: 'የጊዜ ሰሌዳ',
+      labelEn: 'Schedule',
+      icon: '🗓️',
+      contentAm: 'የትምህርት ክፍል መርሐ-ግብር በየሳምንቱ በማስታወቂያ ክፍል ይለቀቃል።',
+      contentEn: 'Weekly department study schedules are published under Announcements.',
+      visible: true
+    }
+  ],
+  customButtons: [
+    {
+      id: 'btn-1',
+      labelAm: 'የትምህርት ክፍል መመሪያ',
+      labelEn: 'Department Guide',
+      url: '#library',
+      color: '#b88a28',
+      location: 'hero',
+      visible: true
+    }
+  ]
+};
+
+const STORAGE_KEY = 'tekle_tewophilos_portal_v1';
+let state = loadState();
+let currentUser = null; // { role: 'student'|'teacher'|'admin', grade?: string }
+let activeTab = 'home';
+let activeAdminSubtab = 'books';
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return structuredClone(DEFAULT_STATE);
+    const parsed = JSON.parse(raw);
+    return {
+      ...structuredClone(DEFAULT_STATE),
+      ...parsed,
+      theme: { ...DEFAULT_STATE.theme, ...(parsed.theme || {}) },
+      credentials: { ...DEFAULT_STATE.credentials, ...(parsed.credentials || {}) }
+    };
+  } catch (e) {
+    return structuredClone(DEFAULT_STATE);
+  }
+}
+
+function saveState(pushCloud = false) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  if (pushCloud && state.gasUrl) {
+    pushToCloud();
+  }
+}
+
+async function pushToCloud() {
+  if (!state.gasUrl) return;
+  try {
+    await fetch(state.gasUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        action: 'syncAll',
+        data: {
+          Books: state.books,
+          Announcements: state.announcements,
+          Classrooms: state.classrooms,
+          Sections: state.sections,
+          Custom_Tabs: state.customTabs,
+          Custom_Buttons: state.customButtons,
+          UI_Theme: Object.entries(state.theme).map(([key, value]) => ({ key, value: String(value ?? '') }))
+        }
+      })
+    });
+    showToast(state.lang === 'am' ? 'ወደ Google Sheets ተልኳል' : 'Synced to Google Sheets');
+  } catch (err) {
+    console.warn(err);
+  }
+}
+
+async function syncFromCloud() {
+  if (!state.gasUrl) {
+    showToast(state.lang === 'am' ? 'በመጀመሪያ የ Google Sheets Web App URL ያስገቡ' : 'Set Google Sheets Web App URL in Super Admin first');
+    return;
+  }
+  try {
+    const res = await fetch(state.gasUrl);
+    const json = await res.json();
+    if (json.status === 'ok' && json.data) {
+      if (Array.isArray(json.data.Books) && json.data.Books.length) state.books = json.data.Books;
+      if (Array.isArray(json.data.Announcements) && json.data.Announcements.length) state.announcements = json.data.Announcements;
+      if (Array.isArray(json.data.Classrooms) && json.data.Classrooms.length) {
+        state.classrooms = json.data.Classrooms.map(c => ({
+          ...c,
+          isLive: c.isLive === true || String(c.isLive).toLowerCase() === 'true'
+        }));
+      }
+      if (Array.isArray(json.data.Sections) && json.data.Sections.length) {
+        state.sections = json.data.Sections.map(s => ({
+          ...s,
+          onlineAllowed: s.onlineAllowed === true || String(s.onlineAllowed).toLowerCase() === 'true'
+        }));
+      }
+      if (Array.isArray(json.data.Custom_Tabs)) {
+        state.customTabs = json.data.Custom_Tabs.map(t => ({
+          ...t,
+          visible: t.visible === true || String(t.visible).toLowerCase() === 'true'
+        }));
+      }
+      if (Array.isArray(json.data.Custom_Buttons)) {
+        state.customButtons = json.data.Custom_Buttons.map(b => ({
+          ...b,
+          visible: b.visible === true || String(b.visible).toLowerCase() === 'true'
+        }));
+      }
+      if (Array.isArray(json.data.UI_Theme)) {
+        json.data.UI_Theme.forEach(row => {
+          if (row.key) state.theme[row.key] = row.value;
+        });
+      }
+      saveState(false);
+      applyTheme();
+      renderAll();
+      showToast(state.lang === 'am' ? 'መረጃ ታድሷል' : 'Data synced from Google Sheets');
+    }
+  } catch (e) {
+    showToast(state.lang === 'am' ? 'ማመሳሰል አልተሳካም' : 'Sync failed');
+  }
+}
+
+function applyTheme() {
+  const root = document.documentElement;
+  root.style.setProperty('--primary', state.theme.primary || '#162a4a');
+  root.style.setProperty('--primary-dark', state.theme.primaryDark || '#0e1c33');
+  root.style.setProperty('--accent', state.theme.accent || '#b88a28');
+  root.style.setProperty('--bg', state.theme.bg || '#f6f4ef');
+
+  const img = document.getElementById('customLogoImg');
+  const svg = document.getElementById('defaultLogoSvg');
+  if (state.theme.logoUrl && state.theme.logoUrl.trim()) {
+    img.src = state.theme.logoUrl.trim();
+    img.classList.remove('hidden');
+    svg.classList.add('hidden');
+  } else {
+    img.classList.add('hidden');
+    svg.classList.remove('hidden');
+  }
+}
+
+function toggleLanguage() {
+  state.lang = state.lang === 'am' ? 'en' : 'am';
+  saveState(false);
+  renderAll();
+}
+
+function t(amText, enText) {
+  return state.lang === 'am' ? amText : enText;
+}
+
+function showToast(msg) {
+  const box = document.getElementById('toastBox');
+  box.textContent = msg;
+  box.classList.add('show');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => box.classList.remove('show'), 3200);
+}
+
+/* Auth & Modals */
+function openLoginModal(defaultRole = 'student') {
+  populateStudentGradesSelect();
+  switchLoginRole(defaultRole);
+  document.getElementById('loginModal').classList.add('open');
+}
+
+function closeLoginModal() {
+  document.getElementById('loginModal').classList.remove('open');
+}
+
+function switchLoginRole(role) {
+  ['student', 'teacher', 'admin'].forEach(r => {
+    document.getElementById('roleTab' + r[0].toUpperCase() + r.slice(1)).classList.toggle('active', r === role);
+    document.getElementById(r + 'LoginForm').classList.toggle('hidden', r !== role);
+  });
+}
+
+function populateStudentGradesSelect() {
+  const sel = document.getElementById('studentGradeSelect');
+  sel.innerHTML = GRADES.map(g => `<option value="${g}">${t('ክፍል', 'Grade')} ${g}</option>`).join('');
+}
+
+function handleStudentLogin(e) {
+  e.preventDefault();
+  const grade = document.getElementById('studentGradeSelect').value;
+  const code = document.getElementById('studentPasscodeInput').value.trim();
+  const sec = state.sections.find(s => String(s.grade) === String(grade));
+  if (!sec || sec.passcode !== code) {
+    showToast(t('የክፍል መግቢያ ኮድ ትክክል አይደለም', 'Invalid section passcode'));
+    return;
+  }
+  currentUser = { role: 'student', grade };
+  document.getElementById('studentPasscodeInput').value = '';
+  closeLoginModal();
+  renderAll();
+  showToast(t(`ወደ ክፍል ${grade} ገብተዋል`, `Logged in to Grade ${grade}`));
+}
+
+function handleTeacherLogin(e) {
+  e.preventDefault();
+  const id = document.getElementById('teacherIdInput').value.trim();
+  const pass = document.getElementById('teacherPassInput').value.trim();
+  if (id !== state.credentials.teacherId || pass !== state.credentials.teacherPass) {
+    showToast(t('የመምህር መረጃ ትክክል አይደለም', 'Invalid teacher credentials'));
+    return;
+  }
+  currentUser = { role: 'teacher' };
+  document.getElementById('teacherPassInput').value = '';
+  closeLoginModal();
+  activeTab = 'classroom';
+  renderAll();
+  showToast(t('መምህር ገብተዋል', 'Teacher logged in'));
+}
+
+function handleAdminLogin(e) {
+  e.preventDefault();
+  const u = document.getElementById('adminUserInput').value.trim();
+  const p = document.getElementById('adminPassInput').value.trim();
+  if (u !== state.credentials.adminUser || p !== state.credentials.adminPass) {
+    showToast(t('የሱፐር አድሚን መረጃ ትክክል አይደለም', 'Invalid Super Admin credentials'));
+    return;
+  }
+  currentUser = { role: 'admin' };
+  document.getElementById('adminPassInput').value = '';
+  closeLoginModal();
+  activeTab = 'admin';
+  renderAll();
+  showToast(t('እንኳን ወደ Super Admin Studio በደህና መጡ', 'Welcome to Super Admin Studio'));
+}
+
+function logoutUser() {
+  currentUser = null;
+  if (activeTab === 'admin') activeTab = 'home';
+  renderAll();
+  showToast(t('ወጥተዋል', 'Logged out'));
+}
+
+/* Navigation & Session Strip */
+function renderHeaderAndNav() {
+  document.getElementById('langToggleBtn').textContent = state.lang === 'am' ? '🌐 English' : '🌐 አማርኛ';
+  document.getElementById('syncBtnText').textContent = t('አመሳስል', 'Sync');
+  document.getElementById('loginBtnText').textContent = t('ግባ', 'Login');
+  document.getElementById('logoutBtnText').textContent = t('ውጣ', 'Logout');
+
+  const isLoggedIn = !!currentUser;
+  document.getElementById('loginOpenBtn').classList.toggle('hidden', isLoggedIn);
+  document.getElementById('logoutBtn').classList.toggle('hidden', !isLoggedIn);
+
+  const baseTabs = [
+    { id: 'home', label: t('ዋና ገጽ', 'Home') },
+    { id: 'library', label: t('ቤተ-መጻሕፍት (PDF)', 'PDF Library') },
+    { id: 'notices', label: t('ማሳወቂያዎች', 'Notifications') },
+    { id: 'classroom', label: t('ኦንላይን ክፍል (7–12)', 'Online Class (7–12)') }
+  ];
+
+  state.customTabs.filter(tab => tab.visible).forEach(ct => {
+    baseTabs.push({
+      id: ct.id,
+      label: `${ct.icon || '📌'} ${t(ct.labelAm, ct.labelEn)}`
+    });
+  });
+
+  if (currentUser && currentUser.role === 'admin') {
+    baseTabs.push({ id: 'admin', label: '⚙️ ' + t('Super Admin Studio', 'Super Admin Studio') });
+  }
+
+  const navEl = document.getElementById('navTabsContainer');
+  navEl.innerHTML = baseTabs.map(tab => `
+    <button class="tab-btn ${activeTab === tab.id ? 'active' : ''}" onclick="selectTab('${tab.id}')">
+      ${tab.label}
+    </button>
+  `).join('');
+
+  const statusEl = document.getElementById('sessionStatusText');
+  const actionsEl = document.getElementById('sessionQuickActions');
+
+  if (!currentUser) {
+    statusEl.innerHTML = `<span class="badge badge-navy">${t('እንግዳ', 'Guest')}</span> ${t('መጻሕፍትን ማየት ይችላሉ፤ ለክፍል መግቢያ ወይም ለአስተዳደር ይግቡ።', 'Browsing public view. Login with your section code or role for full access.')}`;
+    actionsEl.innerHTML = `<button class="btn btn-sm btn-gold" onclick="openLoginModal('student')">${t('የተማሪ ክፍል ኮድ አስገባ', 'Enter Section Code')}</button>`;
+  } else if (currentUser.role === 'student') {
+    const canOnline = ONLINE_GRADES.includes(currentUser.grade);
+    statusEl.innerHTML = `<span class="badge badge-green">${t('ተማሪ', 'Student')} • ${t('ክፍል', 'Grade')} ${currentUser.grade}</span> ${canOnline ? t('የኦንላይን ክፍል መዳረሻ አለዎት', 'Online classroom enabled for your grade') : t('ኦንላይን ክፍል ለ7ኛ–12ኛ ክፍሎች ብቻ ነው', 'Live online class is for Grades 7–12 only')}`;
+    actionsEl.innerHTML = canOnline
+      ? `<button class="btn btn-sm" onclick="selectTab('classroom')">${t('ወደ ኦንላይን ክፍል', 'Go to Online Class')}</button>`
+      : '';
+  } else if (currentUser.role === 'teacher') {
+    statusEl.innerHTML = `<span class="badge badge-gold">${t('መምህር', 'Teacher')}</span> ${t('ለ7ኛ–12ኛ ክፍሎች የኦንላይን ክፍል መፍጠር ይችላሉ', 'Can launch live classes (Grades 7–12) with session passwords')}`;
+    actionsEl.innerHTML = `<button class="btn btn-sm btn-gold" onclick="selectTab('classroom')">${t('ክፍል ክፈት', 'Manage Live Class')}</button>`;
+  } else if (currentUser.role === 'admin') {
+    statusEl.innerHTML = `<span class="badge badge-navy">🛡️ Super Admin</span> ${t('ሙሉ የገጽ፣ የአዝራር፣ የታብ እና የመጻሕፍት ቁጥጥር', 'Full UI, Tab, Button, Library, Notification & Passcode Control')}`;
+    actionsEl.innerHTML = `<button class="btn btn-sm btn-gold" onclick="selectTab('admin')">${t('Super Admin Studio', 'Super Admin Studio')}</button>`;
+  }
+}
+
+function selectTab(tabId) {
+  activeTab = tabId;
+  renderAll();
+}
+
+/* Page Renderers */
+function renderPage() {
+  const container = document.getElementById('pageContainer');
+  if (activeTab === 'home') return renderHomePage(container);
+  if (activeTab === 'library') return renderLibraryPage(container);
+  if (activeTab === 'notices') return renderNoticesPage(container);
+  if (activeTab === 'classroom') return renderClassroomPage(container);
+  if (activeTab === 'admin' && currentUser?.role === 'admin') return renderAdminPage(container);
+
+  const customTab = state.customTabs.find(c => c.id === activeTab);
+  if (customTab) {
+    container.innerHTML = `
+      <div class="card">
+        <div class="section-title">${customTab.icon || '📌'} ${t(customTab.labelAm, customTab.labelEn)}</div>
+        <p class="mt-2">${t(customTab.contentAm, customTab.contentEn)}</p>
+      </div>
+    `;
+    return;
+  }
+
+  activeTab = 'home';
+  renderHomePage(container);
+}
+
+function renderHomePage(container) {
+  const heroBtns = state.customButtons
+    .filter(b => b.visible && b.location === 'hero')
+    .map(b => {
+      const href = b.url || '#';
+      const isInternal = href.startsWith('#');
+      const targetTab = href.replace('#', '');
+      if (isInternal && ['home','library','notices','classroom'].includes(targetTab)) {
+        return `<button class="btn btn-sm" style="background:${b.color || 'var(--accent)'}" onclick="selectTab('${targetTab}')">${t(b.labelAm, b.labelEn)}</button>`;
+      }
+      return `<a class="btn btn-sm" style="background:${b.color || 'var(--accent)'}" href="${href}" target="_blank" rel="noopener">${t(b.labelAm, b.labelEn)}</a>`;
+    }).join('');
+
+  const liveClasses = state.classrooms.filter(c => c.isLive);
+
+  container.innerHTML = `
+    <section class="hero">
+      <h2>${t(state.theme.heroTitleAm, state.theme.heroTitleEn)}</h2>
+      <p>${t(state.theme.heroSubAm, state.theme.heroSubEn)}</p>
+      <div class="custom-btn-row">
+        <button class="btn btn-gold" onclick="selectTab('library')">📚 ${t('ቤተ-መጻሕፍት ክፈት', 'Browse PDF Library')}</button>
+        <button class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.45)" onclick="selectTab('classroom')">🎥 ${t('ኦንላይን ክፍል (7–12)', 'Online Class (7–12)')}</button>
+        ${heroBtns}
+      </div>
+    </section>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="section-header">
+          <div class="section-title">📢 ${t('የቅርብ ጊዜ ማሳወቂያዎች', 'Latest Notifications')}</div>
+          <button class="btn btn-sm btn-outline" onclick="selectTab('notices')">${t('ሁሉንም ይመልከቱ', 'View All')}</button>
+        </div>
+        ${state.announcements.slice(0, 3).map(a => `
+          <div class="card notice-card ${a.priority || ''}" style="box-shadow:none">
+            <div style="display:flex;justify-content:space-between;gap:0.5rem;align-items:center">
+              <strong>${t(a.titleAm, a.titleEn)}</strong>
+              <span class="badge badge-navy">${a.targetGrade || 'All'}</span>
+            </div>
+            <p class="mt-1" style="font-size:0.88rem">${t(a.bodyAm, a.bodyEn)}</p>
+            <div class="muted mt-1">${a.date || ''}</div>
+          </div>
+        `).join('') || `<p class="muted">${t('ማሳወቂያ የለም', 'No notifications yet.')}</p>`}
+      </div>
+
+      <div class="card">
+        <div class="section-header">
+          <div class="section-title">🎥 ${t('ንቁ የኦንላይን ክፍሎች (7–12)', 'Active Live Classes (7–12)')}</div>
+          <button class="btn btn-sm btn-outline" onclick="selectTab('classroom')">${t('ክፍል ይመልከቱ', 'Open Classrooms')}</button>
+        </div>
+        ${liveClasses.length ? liveClasses.map(c => `
+          <div class="classroom-card live mt-1">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong>${t('ክፍል', 'Grade')} ${c.grade} — ${t(c.topicAm || 'ቀጥታ ትምህርት', c.topicEn || 'Live Session')}</strong>
+              <span class="badge badge-green">LIVE</span>
+            </div>
+            <p class="muted mt-1">${t('መምህር', 'Teacher')}: ${c.teacherName || '-'}</p>
+            <button class="btn btn-sm btn-gold mt-1" onclick="selectTab('classroom')">${t('ለመግባት ይሂዱ', 'Join Class')}</button>
+          </div>
+        `).join('') : `<p class="muted">${t('በአሁኑ ጊዜ የተከፈተ የኦንላይን ክፍል የለም። (የ7ኛ–12ኛ ክፍል መምህራን ሲያስፈልግ ይከፍታሉ)', 'No live online classes active right now. Teachers for Grades 7–12 open sessions when needed.')}</p>`}
+
+        <div class="mt-2">
+          <div class="section-title" style="font-size:1rem">🏫 ${t('የክፍሎች መዋቅር (1–12)', 'Grades Structure (1–12)')}</div>
+          <div class="flex-gap mt-1">
+            ${GRADES.map(g => `<span class="badge ${ONLINE_GRADES.includes(g) ? 'badge-gold' : 'badge-navy'}">${g}</span>`).join('')}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderLibraryPage(container) {
+  const isAdmin = currentUser?.role === 'admin';
+  container.innerHTML = `
+    <div class="section-header">
+      <div class="section-title">📚 ${t('የመጻሕፍት ቤተ-መጻሕፍት (PDF)', 'Digital PDF Library')}</div>
+      ${isAdmin ? `<button class="btn btn-sm btn-gold" onclick="selectTab('admin');activeAdminSubtab='books';renderAll();">+ ${t('መጽሐፍ ጨምር / አስተዳድር', 'Add / Manage Books')}</button>` : ''}
+    </div>
+
+    <div class="toolbar">
+      <div style="flex:2;min-width:200px">
+        <input type="text" id="bookSearchInput" oninput="filterBooks()" placeholder="${t('በመጽሐፍ ስም ወይም በደራሲ ይፈልጉ...', 'Search book title or author...')}" />
+      </div>
+      <div style="flex:1;min-width:150px">
+        <select id="bookGradeFilter" onchange="filterBooks()">
+          <option value="ALL">${t('ሁሉም ክፍሎች', 'All Grades')}</option>
+          ${GRADES.map(g => `<option value="${g}">${t('ክፍል', 'Grade')} ${g}</option>`).join('')}
+        </select>
+      </div>
+    </div>
+
+    <div class="grid-3" id="booksGrid"></div>
+  `;
+  filterBooks();
+}
+
+function filterBooks() {
+  const q = (document.getElementById('bookSearchInput')?.value || '').toLowerCase().trim();
+  const gradeFilter = document.getElementById('bookGradeFilter')?.value || 'ALL';
+  const isAdmin = currentUser?.role === 'admin';
+
+  const matches = state.books.filter(b => {
+    const titleMatch = (b.titleAm || '').toLowerCase().includes(q) ||
+                       (b.titleEn || '').toLowerCase().includes(q) ||
+                       (b.author || '').toLowerCase().includes(q);
+    const gradeMatch = gradeFilter === 'ALL' || String(b.grade) === gradeFilter;
+    return titleMatch && gradeMatch;
+  });
+
+  const grid = document.getElementById('booksGrid');
+  if (!grid) return;
+
+  if (!matches.length) {
+    grid.innerHTML = `<div class="card"><p class="muted">${t('የተገኘ መጽሐፍ የለም', 'No matching PDF books found.')}</p></div>`;
+    return;
+  }
+
+  grid.innerHTML = matches.map(b => `
+    <div class="card">
+      <div class="book-cover" style="background: linear-gradient(135deg, ${b.coverColor || 'var(--primary)'}, var(--primary-dark))">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="badge" style="background:rgba(255,255,255,0.2);color:#fff">${t('ክፍል', 'Grade')} ${b.grade || '-'}</span>
+          <span style="font-size:0.75rem;opacity:0.9">PDF</span>
+        </div>
+        <div style="font-size:0.78rem;color:var(--accent-light);font-weight:700">${b.category || ''}</div>
+      </div>
+      <div class="book-title">${t(b.titleAm, b.titleEn)}</div>
+      <div class="book-sub">${b.author || ''} • ${b.addedDate || ''}</div>
+      <div class="flex-gap">
+        <a class="btn btn-sm btn-gold" href="${b.pdfUrl}" target="_blank" rel="noopener">📖 ${t('ክፈት / አውርድ', 'Open PDF')}</a>
+        ${isAdmin ? `<button class="btn btn-sm btn-danger" onclick="deleteBook('${b.id}')">🗑️ ${t('ሰርዝ', 'Delete')}</button>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderNoticesPage(container) {
+  const canPost = currentUser?.role === 'admin' || currentUser?.role === 'teacher';
+  container.innerHTML = `
+    <div class="section-header">
+      <div class="section-title">📢 ${t('የተማሪዎች ማሳወቂያዎች', 'Student Notifications')}</div>
+    </div>
+
+    ${canPost ? `
+      <div class="card mb-2" style="margin-bottom:1.25rem">
+        <h3 style="font-size:1rem;color:var(--primary);margin-bottom:0.75rem">${t('አዲስ ማሳወቂያ ላክ', 'Post New Notification')}</h3>
+        <form onsubmit="handleAddNotice(event)">
+          <div class="grid-2">
+            <div class="field">
+              <label>ርዕስ (አማርኛ)</label>
+              <input type="text" id="noticeTitleAm" required />
+            </div>
+            <div class="field">
+              <label>Title (English)</label>
+              <input type="text" id="noticeTitleEn" required />
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label>መልዕክት (አማርኛ)</label>
+              <textarea id="noticeBodyAm" rows="2" required></textarea>
+            </div>
+            <div class="field">
+              <label>Message (English)</label>
+              <textarea id="noticeBodyEn" rows="2" required></textarea>
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label>Target Grade</label>
+              <select id="noticeGrade">
+                <option value="All">All Grades (1–12)</option>
+                ${GRADES.map(g => `<option value="${g}">Grade ${g}</option>`).join('')}
+              </select>
+            </div>
+            <div class="field">
+              <label>Style / Priority</label>
+              <select id="noticePriority">
+                <option value="gold">Standard (Gold)</option>
+                <option value="urgent">Urgent (Red)</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-gold">${t('ማሳወቂያ አውጣ', 'Publish Notification')}</button>
+        </form>
+      </div>
+    ` : ''}
+
+    <div>
+      ${state.announcements.map(a => `
+        <div class="card notice-card ${a.priority || ''}">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;flex-wrap:wrap">
+            <strong style="font-size:1rem;color:var(--primary)">${t(a.titleAm, a.titleEn)}</strong>
+            <div class="flex-gap">
+              <span class="badge badge-navy">${a.targetGrade || 'All'}</span>
+              <span class="muted">${a.date || ''}</span>
+              ${currentUser?.role === 'admin' ? `<button class="btn btn-sm btn-danger" onclick="deleteNotice('${a.id}')">✕</button>` : ''}
+            </div>
+          </div>
+          <p class="mt-1">${t(a.bodyAm, a.bodyEn)}</p>
+        </div>
+      `).join('') || `<div class="card"><p class="muted">${t('ማሳወቂያ የለም', 'No notifications available.')}</p></div>`}
+    </div>
+  `;
+}
+
+function handleAddNotice(e) {
+  e.preventDefault();
+  state.announcements.unshift({
+    id: 'an-' + Date.now(),
+    titleAm: document.getElementById('noticeTitleAm').value.trim(),
+    titleEn: document.getElementById('noticeTitleEn').value.trim(),
+    bodyAm: document.getElementById('noticeBodyAm').value.trim(),
+    bodyEn: document.getElementById('noticeBodyEn').value.trim(),
+    targetGrade: document.getElementById('noticeGrade').value,
+    priority: document.getElementById('noticePriority').value,
+    date: new Date().toISOString().slice(0, 10)
+  });
+  saveState(true);
+  renderAll();
+  showToast(t('ማሳወቂያ ተለቋል', 'Notification published'));
+}
+
+function deleteNotice(id) {
+  state.announcements = state.announcements.filter(a => a.id !== id);
+  saveState(true);
+  renderAll();
+}
+
+/* Online Classrooms (Grades 7A, 7B, 8–12 ONLY) */
+function renderClassroomPage(container) {
+  const isAdmin = currentUser?.role === 'admin';
+  const isTeacher = currentUser?.role === 'teacher';
+  const isStudent = currentUser?.role === 'student';
+
+  let visibleGrades = ONLINE_GRADES;
+  if (isStudent) {
+    if (!ONLINE_GRADES.includes(currentUser.grade)) {
+      container.innerHTML = `
+        <div class="card">
+          <div class="section-title">🎥 ${t('የኦንላይን ክፍል (7ኛ–12ኛ ክፍል)', 'Online Classroom (Grades 7–12)')}</div>
+          <p class="mt-2">${t(
+            `የእርስዎ ክፍል (${currentUser.grade}) በኦንላይን ክፍል መርሐ-ግብር ውስጥ አልተካተተም። የኦንላይን ክፍል የሚሰጠው ለ7ኛ እስከ 12ኛ ክፍል ተማሪዎች ሲያስፈልግ ብቻ ነው።`,
+            `Your grade (${currentUser.grade}) does not have live online classes. Live online sessions are available when needed for Grades 7A, 7B, and 8–12 only.`
+          )}</p>
+        </div>
+      `;
+      return;
+    }
+    visibleGrades = [currentUser.grade];
+  }
+
+  container.innerHTML = `
+    <div class="section-header">
+      <div>
+        <div class="section-title">🎥 ${t('የኦንላይን መማሪያ ክፍሎች (7A, 7B, 8–12)', 'Grade Online Classrooms (7A, 7B, 8–12)')}</div>
+        <p class="muted">${t(
+          'ሲያስፈልግ ለ7ኛ–12ኛ ክፍሎች ብቻ ይከፈታል። መምህር በሚከፍትበት ጊዜ ለክፍሉ ተማሪዎች የሚሰጥ የአንድ ጊዜ የክፍል የይለፍ ቃል ይኖረዋል።',
+          'Available when needed for Grades 7–12 only. Each session uses a password set by the teacher and shared with that grade.'
+        )}</p>
+      </div>
+      ${!currentUser ? `<button class="btn btn-sm btn-gold" onclick="openLoginModal('student')">${t('በክፍል ኮድ ግባ', 'Student Grade Login')}</button>` : ''}
+    </div>
+
+    <div class="grid-2">
+      ${visibleGrades.map(g => {
+        const room = state.classrooms.find(c => String(c.grade) === g) || { grade: g, isLive: false };
+        const canManage = isAdmin || isTeacher;
+        return `
+          <div class="classroom-card ${room.isLive ? 'live' : ''}">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem">
+              <h3 style="color:var(--primary)">${t('ክፍል', 'Grade')} ${g}</h3>
+              <span class="badge ${room.isLive ? 'badge-green' : 'badge-navy'}">${room.isLive ? '● LIVE' : t('ዝግ', 'Closed')}</span>
+            </div>
+
+            ${room.isLive ? `
+              <div class="mt-2">
+                <div><strong>${t('ርዕስ', 'Topic')}:</strong> ${t(room.topicAm || 'የኦንላይን ትምህርት', room.topicEn || 'Live Class')}</div>
+                <div class="muted">${t('መምህር', 'Teacher')}: ${room.teacherName || '-'}</div>
+                ${(isStudent || canManage) ? `
+                  <div class="mt-1" style="background:#fff;border:1px solid var(--border);padding:0.65rem;border-radius:10px">
+                    <div style="font-size:0.82rem;font-weight:700;color:var(--primary)">${t('የክፍል የይለፍ ቃል / Session Password', 'Session Password')}: <span style="color:var(--accent)">${room.sessionPassword || '-'}</span></div>
+                    ${isStudent ? `
+                      <div class="flex-gap mt-1">
+                        <input type="password" id="joinPass_${g}" placeholder="${t('የክፍል የይለፍ ቃል ያስገቡ', 'Enter session password')}" style="max-width:210px" />
+                        <button class="btn btn-sm btn-gold" onclick="joinLiveSession('${g}')">${t('ክፍል ግባ', 'Join Session')}</button>
+                      </div>
+                      <div id="joinResult_${g}" class="mt-1"></div>
+                    ` : `
+                      <div class="mt-1 flex-gap">
+                        <a class="btn btn-sm btn-gold" href="${room.meetingUrl || '#'}" target="_blank" rel="noopener">${t('መድረክ ክፈት', 'Open Meeting Link')}</a>
+                        <button class="btn btn-sm btn-outline" onclick="copyInvite('${g}')">📋 ${t('መጋበዣ ኮፒ', 'Copy Invite')}</button>
+                      </div>
+                    `}
+                  </div>
+                ` : `<p class="muted mt-1">${t('ክፍሉ ክፍት ነው። ለመግባት በክፍል ኮድ ይግቡ።', 'Session is active. Login with your grade section code to enter.')}</p>`}
+              </div>
+            ` : `
+              <p class="muted mt-2">${t('በአሁኑ ጊዜ የኦንላይን ክፍል አልተከፈተም።', 'No live session is active for this grade right now.')}</p>
+            `}
+
+            ${canManage ? `
+              <form class="mt-2" style="border-top:1px dashed var(--border);padding-top:0.85rem" onsubmit="saveClassroomSession(event, '${g}')">
+                <div style="font-size:0.82rem;font-weight:800;color:var(--primary);margin-bottom:0.5rem">${t('የክፍል መክፈቻ / ማስተካከያ', 'Start / Update Grade Session')}</div>
+                <div class="grid-2">
+                  <div class="field">
+                    <label>Teacher Name</label>
+                    <input type="text" id="tName_${g}" value="${room.teacherName || ''}" required />
+                  </div>
+                  <div class="field">
+                    <label>Session Password (For Students)</label>
+                    <input type="text" id="tPass_${g}" value="${room.sessionPassword || ''}" required placeholder="e.g. 7A-NOV25" />
+                  </div>
+                </div>
+                <div class="grid-2">
+                  <div class="field">
+                    <label>Topic (Amharic)</label>
+                    <input type="text" id="tTopicAm_${g}" value="${room.topicAm || ''}" />
+                  </div>
+                  <div class="field">
+                    <label>Meeting Link (Google Meet / Zoom / Jitsi)</label>
+                    <input type="url" id="tUrl_${g}" value="${room.meetingUrl || ''}" required placeholder="https://meet.google.com/..." />
+                  </div>
+                </div>
+                <div class="flex-gap">
+                  <button type="submit" class="btn btn-sm btn-gold">▶ ${t('ክፍል ክፈት / አድስ', 'Start / Update Live')}</button>
+                  ${room.isLive ? `<button type="button" class="btn btn-sm btn-danger" onclick="stopClassroomSession('${g}')">■ ${t('ክፍል ዝጋ', 'End Session')}</button>` : ''}
+                </div>
+              </form>
+            ` : ''}
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
+function saveClassroomSession(e, grade) {
+  e.preventDefault();
+  const room = state.classrooms.find(c => String(c.grade) === String(grade));
+  if (!room) return;
+  room.isLive = true;
+  room.teacherName = document.getElementById('tName_' + grade).value.trim();
+  room.sessionPassword = document.getElementById('tPass_' + grade).value.trim();
+  room.topicAm = document.getElementById('tTopicAm_' + grade).value.trim();
+  room.topicEn = room.topicAm;
+  room.meetingUrl = document.getElementById('tUrl_' + grade).value.trim();
+  room.startedAt = new Date().toLocaleString();
+  saveState(true);
+  renderAll();
+  showToast(t(`ለክፍል ${grade} የኦንላይን ክፍል ተከፍቷል`, `Live class started for Grade ${grade}`));
+}
+
+function stopClassroomSession(grade) {
+  const room = state.classrooms.find(c => String(c.grade) === String(grade));
+  if (!room) return;
+  room.isLive = false;
+  room.sessionPassword = '';
+  saveState(true);
+  renderAll();
+  showToast(t(`የክፍል ${grade} ኦንላይን ክፍል ተዘግቷል`, `Live class ended for Grade ${grade}`));
+}
+
+function joinLiveSession(grade) {
+  const room = state.classrooms.find(c => String(c.grade) === String(grade));
+  const entered = (document.getElementById('joinPass_' + grade)?.value || '').trim();
+  const out = document.getElementById('joinResult_' + grade);
+  if (!room || !room.isLive) return;
+  if (entered && entered === room.sessionPassword) {
+    out.innerHTML = `<a class="btn btn-sm btn-gold" href="${room.meetingUrl}" target="_blank" rel="noopener">🚀 ${t('አሁን ወደ ክፍል ግባ', 'Launch Classroom Now')}</a>`;
+  } else {
+    out.innerHTML = `<span class="badge badge-red">${t('የክፍል የይለፍ ቃል ትክክል አይደለም', 'Incorrect session password')}</span>`;
+  }
+}
+
+function copyInvite(grade) {
+  const room = state.classrooms.find(c => String(c.grade) === String(grade));
+  if (!room) return;
+  const text = `ተክለ ቴዎፍሎስ ሰ/ት/ቤት — ክፍል ${grade} የኦንላይን ትምህርት
+ርዕስ: ${room.topicAm || 'Live Class'}
+የክፍል የይለፍ ቃል (Password): ${room.sessionPassword}
+ሊንክ (Link): ${room.meetingUrl}`;
+  navigator.clipboard?.writeText(text);
+  showToast(t('መጋበዣው ኮፒ ተደርጓል', 'Invite copied to clipboard'));
+}
+
+/* Super Admin Studio */
+function renderAdminPage(container) {
+  container.innerHTML = `
+    <div class="section-header">
+      <div class="section-title">⚙️ Super Admin Studio</div>
+      <span class="badge badge-gold">${t('ሙሉ ቁጥጥር', 'Full Control')}</span>
+    </div>
+
+    <div class="subtabs">
+      <button class="subtab-btn ${activeAdminSubtab === 'books' ? 'active' : ''}" onclick="setAdminSub('books')">📚 ${t('መጻሕፍት', 'Books')}</button>
+      <button class="subtab-btn ${activeAdminSubtab === 'sections' ? 'active' : ''}" onclick="setAdminSub('sections')">🔑 ${t('የክፍል ኮዶች (1–12)', 'Section Codes')}</button>
+      <button class="subtab-btn ${activeAdminSubtab === 'ui' ? 'active' : ''}" onclick="setAdminSub('ui')">🎨 ${t('ቀለም፣ ሎጎ እና ጽሑፍ', 'Theme & Logo')}</button>
+      <button class="subtab-btn ${activeAdminSubtab === 'builder' ? 'active' : ''}" onclick="setAdminSub('builder')">🧩 ${t('ታቦች እና አዝራሮች', 'Tabs & Buttons')}</button>
+      <button class="subtab-btn ${activeAdminSubtab === 'sync' ? 'active' : ''}" onclick="setAdminSub('sync')">☁️ ${t('Google Sheets ማመሳሰል', 'Sheets Sync')}</button>
+    </div>
+
+    <div id="adminSubContainer"></div>
+  `;
+
+  const subEl = document.getElementById('adminSubContainer');
+  if (activeAdminSubtab === 'books') renderAdminBooks(subEl);
+  else if (activeAdminSubtab === 'sections') renderAdminSections(subEl);
+  else if (activeAdminSubtab === 'ui') renderAdminUI(subEl);
+  else if (activeAdminSubtab === 'builder') renderAdminBuilder(subEl);
+  else if (activeAdminSubtab === 'sync') renderAdminSync(subEl);
+}
+
+function setAdminSub(sub) {
+  activeAdminSubtab = sub;
+  renderAll();
+}
+
+function renderAdminBooks(el) {
+  el.innerHTML = `
+    <div class="grid-2">
+      <div class="card">
+        <h3 style="color:var(--primary);margin-bottom:0.75rem">${t('አዲስ PDF መጽሐፍ ጨምር', 'Add New PDF Book')}</h3>
+        <form onsubmit="handleAddBook(event)">
+          <div class="field"><label>Book Title (Amharic)</label><input type="text" id="bkTitleAm" required /></div>
+          <div class="field"><label>Book Title (English)</label><input type="text" id="bkTitleEn" required /></div>
+          <div class="grid-2">
+            <div class="field"><label>Author</label><input type="text" id="bkAuthor" value="ትምህርት ክፍል" /></div>
+            <div class="field">
+              <label>Grade</label>
+              <select id="bkGrade">${GRADES.map(g => `<option value="${g}">Grade ${g}</option>`).join('')}</select>
+            </div>
+          </div>
+          <div class="field"><label>PDF Link (Google Drive / Direct PDF URL)</label><input type="url" id="bkUrl" required placeholder="https://drive.google.com/..." /></div>
+          <button type="submit" class="btn btn-gold">+ ${t('መጽሐፍ ጨምር', 'Add Book')}</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3 style="color:var(--primary);margin-bottom:0.75rem">${t('የመጻሕፍት ዝርዝር', 'Existing Books')} (${state.books.length})</h3>
+        <table>
+          <thead><tr><th>Title</th><th>Grade</th><th>Action</th></tr></thead>
+          <tbody>
+            ${state.books.map(b => `
+              <tr>
+                <td>${t(b.titleAm, b.titleEn)}</td>
+                <td>${b.grade}</td>
+                <td><button class="btn btn-sm btn-danger" onclick="deleteBook('${b.id}')">${t('ሰርዝ', 'Delete')}</button></td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+function handleAddBook(e) {
+  e.preventDefault();
+  state.books.unshift({
+    id: 'bk-' + Date.now(),
+    titleAm: document.getElementById('bkTitleAm').value.trim(),
+    titleEn: document.getElementById('bkTitleEn').value.trim(),
+    author: document.getElementById('bkAuthor').value.trim(),
+    grade: document.getElementById('bkGrade').value,
+    category: 'Sunday School / ሰ/ት/ቤት',
+    pdfUrl: document.getElementById('bkUrl').value.trim(),
+    coverColor: state.theme.primary,
+    addedDate: new Date().toISOString().slice(0, 10)
+  });
+  saveState(true);
+  renderAll();
+  showToast(t('መጽሐፍ ተጨምሯል', 'Book added'));
+}
+
+function deleteBook(id) {
+  state.books = state.books.filter(b => b.id !== id);
+  saveState(true);
+  renderAll();
+  showToast(t('መጽሐፍ ተሰርዟል', 'Book deleted'));
+}
+
+function renderAdminSections(el) {
+  el.innerHTML = `
+    <div class="card">
+      <h3 style="color:var(--primary);margin-bottom:0.75rem">${t('የክፍሎች መግቢያ ኮድ (1–12, 3A/3B, 7A/7B)', 'Grade & Section Passcodes')}</h3>
+      <table>
+        <thead><tr><th>Grade</th><th>Section Passcode</th><th>Online Class</th><th>Save</th></tr></thead>
+        <tbody>
+          ${state.sections.map(s => `
+            <tr>
+              <td><strong>${s.grade}</strong></td>
+              <td><input type="text" id="secCode_${s.grade}" value="${s.passcode}" /></td>
+              <td>${ONLINE_GRADES.includes(s.grade) ? '<span class="badge badge-gold">7–12 Eligible</span>' : '<span class="muted">No Online</span>'}</td>
+              <td><button class="btn btn-sm btn-gold" onclick="updateSectionCode('${s.grade}')">${t('አስቀምጥ', 'Save')}</button></td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function updateSectionCode(grade) {
+  const sec = state.sections.find(s => String(s.grade) === String(grade));
+  if (!sec) return;
+  sec.passcode = document.getElementById('secCode_' + grade).value.trim();
+  saveState(true);
+  showToast(t(`የክፍል ${grade} ኮድ ተቀይሯል`, `Passcode updated for Grade ${grade}`));
+}
+
+function renderAdminUI(el) {
+  el.innerHTML = `
+    <div class="card">
+      <h3 style="color:var(--primary);margin-bottom:0.75rem">${t('ሎጎ፣ ቀለም እና የዋና ገጽ ጽሑፍ', 'Logo, Colors & Hero Text')}</h3>
+      <form onsubmit="handleSaveUI(event)">
+        <div class="grid-2">
+          <div class="field"><label>Primary Color</label><input type="color" id="uiPrimary" value="${state.theme.primary}" /></div>
+          <div class="field"><label>Accent Color (Gold)</label><input type="color" id="uiAccent" value="${state.theme.accent}" /></div>
+        </div>
+        <div class="field">
+          <label>Logo Image URL or Upload File</label>
+          <input type="text" id="uiLogoUrl" value="${state.theme.logoUrl || ''}" placeholder="https://... or upload below" />
+          <input type="file" accept="image/*" class="mt-1" onchange="handleLogoUpload(event)" />
+        </div>
+        <div class="grid-2">
+          <div class="field"><label>Hero Title (Amharic)</label><input type="text" id="uiHeroAm" value="${state.theme.heroTitleAm}" /></div>
+          <div class="field"><label>Hero Title (English)</label><input type="text" id="uiHeroEn" value="${state.theme.heroTitleEn}" /></div>
+        </div>
+        <button type="submit" class="btn btn-gold">${t('ለውጦችን አስቀምጥ', 'Save UI Changes')}</button>
+      </form>
+    </div>
+  `;
+}
+
+function handleLogoUpload(e) {
+  const file = e.target.files?.[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    document.getElementById('uiLogoUrl').value = reader.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function handleSaveUI(e) {
+  e.preventDefault();
+  state.theme.primary = document.getElementById('uiPrimary').value;
+  state.theme.accent = document.getElementById('uiAccent').value;
+  state.theme.logoUrl = document.getElementById('uiLogoUrl').value.trim();
+  state.theme.heroTitleAm = document.getElementById('uiHeroAm').value.trim();
+  state.theme.heroTitleEn = document.getElementById('uiHeroEn').value.trim();
+  saveState(true);
+  applyTheme();
+  renderAll();
+  showToast(t('የገጽ ገጽታ ተቀይሯል', 'UI theme updated'));
+}
+
+function renderAdminBuilder(el) {
+  el.innerHTML = `
+    <div class="grid-2">
+      <div class="card">
+        <h3 style="color:var(--primary);margin-bottom:0.75rem">${t('አዲስ ታብ ጨምር / ሰርዝ', 'Add / Delete Custom Tabs')}</h3>
+        <form onsubmit="handleAddCustomTab(event)">
+          <div class="grid-2">
+            <div class="field"><label>Tab Name (Amharic)</label><input type="text" id="ctAm" required /></div>
+            <div class="field"><label>Tab Name (English)</label><input type="text" id="ctEn" required /></div>
+          </div>
+          <div class="field"><label>Content (Amharic)</label><textarea id="ctBodyAm" rows="2"></textarea></div>
+          <div class="field"><label>Content (English)</label><textarea id="ctBodyEn" rows="2"></textarea></div>
+          <button type="submit" class="btn btn-sm btn-gold">+ ${t('ታብ ጨምር', 'Add Tab')}</button>
+        </form>
+        <div class="mt-2">
+          ${state.customTabs.map(ct => `
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:0.45rem 0;border-bottom:1px solid var(--border)">
+              <span>${t(ct.labelAm, ct.labelEn)}</span>
+              <button class="btn btn-sm btn-danger" onclick="deleteCustomTab('${ct.id}')">${t('ሰርዝ', 'Delete')}</button>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="color:var(--primary);margin-bottom:0.75rem">${t('አዲስ አዝራር ጨምር / ሰርዝ', 'Add / Delete Custom Buttons')}</h3>
+        <form onsubmit="handleAddCustomBtn(event)">
+          <div class="grid-2">
+            <div class="field"><label>Button Text (Amharic)</label><input type="text" id="cbAm" required /></div>
+            <div class="field"><label>Button Text (English)</label><input type="text" id="cbEn" required /></div>
+          </div>
+          <div class="field"><label>Link URL (or #library, #notices, #classroom)</label><input type="text" id="cbUrl" required value="#library" /></div>
+          <button type="submit" class="btn btn-sm btn-gold">+ ${t('አዝራር ጨምር', 'Add Button')}</button>
+        </form>
+        <div class="mt-2">
+          ${state.customButtons.map(cb => `
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:0.45rem 0;border-bottom:1px solid var(--border)">
+              <span>${t(cb.labelAm, cb.labelEn)}</span>
+              <button class="btn btn-sm btn-danger" onclick="deleteCustomBtn('${cb.id}')">${t('ሰርዝ', 'Delete')}</button>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function handleAddCustomTab(e) {
+  e.preventDefault();
+  state.customTabs.push({
+    id: 'tab-' + Date.now(),
+    labelAm: document.getElementById('ctAm').value.trim(),
+    labelEn: document.getElementById('ctEn').value.trim(),
+    icon: '📌',
+    contentAm: document.getElementById('ctBodyAm').value.trim(),
+    contentEn: document.getElementById('ctBodyEn').value.trim(),
+    visible: true
+  });
+  saveState(true);
+  renderAll();
+}
+
+function deleteCustomTab(id) {
+  state.customTabs = state.customTabs.filter(t => t.id !== id);
+  if (activeTab === id) activeTab = 'home';
+  saveState(true);
+  renderAll();
+}
+
+function handleAddCustomBtn(e) {
+  e.preventDefault();
+  state.customButtons.push({
+    id: 'btn-' + Date.now(),
+    labelAm: document.getElementById('cbAm').value.trim(),
+    labelEn: document.getElementById('cbEn').value.trim(),
+    url: document.getElementById('cbUrl').value.trim(),
+    color: state.theme.accent,
+    location: 'hero',
+    visible: true
+  });
+  saveState(true);
+  renderAll();
+}
+
+function deleteCustomBtn(id) {
+  state.customButtons = state.customButtons.filter(b => b.id !== id);
+  saveState(true);
+  renderAll();
+}
+
+function renderAdminSync(el) {
+  el.innerHTML = `
+    <div class="card">
+      <h3 style="color:var(--primary);margin-bottom:0.5rem">Google Apps Script Web App URL</h3>
+      <p class="muted mb-1" style="margin-bottom:0.85rem">${t('የ Apps Script /exec ሊንክ እዚህ ያስገቡ።', 'Paste your deployed Google Apps Script Web App (/exec) URL below.')}</p>
+      <div class="field">
+        <input type="url" id="gasUrlInput" value="${state.gasUrl || ''}" placeholder="https://script.google.com/macros/s/.../exec" />
+      </div>
+      <div class="flex-gap">
+        <button class="btn btn-gold" onclick="saveGasUrl()">${t('አስቀምጥ እና አመሳስል', 'Save & Push to Sheet')}</button>
+        <button class="btn btn-outline" onclick="syncFromCloud()">${t('ከ Sheet አምጣ', 'Pull from Sheet')}</button>
+      </div>
+    </div>
+  `;
+}
+
+function saveGasUrl() {
+  state.gasUrl = document.getElementById('gasUrlInput').value.trim();
+  saveState(true);
+  showToast(t('URL ተቀምጧል', 'Web App URL saved'));
+}
+
+function renderAll() {
+  applyTheme();
+  renderHeaderAndNav();
+  renderPage();
+}
+
+renderAll();
+</script>
+</body>
+</html>
